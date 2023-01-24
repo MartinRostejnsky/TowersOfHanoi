@@ -8,12 +8,15 @@ namespace TowersOfHanoi
 {
     class Game
     {
-        public Stack<int>[] Towers = {
+        protected Stack<int>[] Towers = {
         new Stack<int>(),
         new Stack<int>(),
         new Stack<int>()
-    };
+        };
 
+        public int TowerA { get { return Towers[0].Count(); } }
+        public int TowerB { get { return Towers[1].Count(); } }
+        public int TowerC { get { return Towers[2].Count(); } }
 
         public Game (int discs)
         {
@@ -48,7 +51,7 @@ namespace TowersOfHanoi
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
             string state = "";
             foreach (Stack<int> i in Towers)
