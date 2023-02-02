@@ -58,7 +58,7 @@ namespace TowersOfHanoi
             foreach (Stack<int> stack in Towers) if (stack.Count > biggest) biggest = stack.Count;
             for (int i = biggest-1; i >= 0; i--) {
                 for (int j = 0; j < Towers.Length; j++) {
-                    if (j == 0) state += "|";
+                    if (j == 0) state += "|"; #kde moje funkce
                     if (i >= Towers[j].Count) state += " ";
                     else state += Towers[j].ElementAt(Towers[j].Count-1-i);
                     state += "|";
